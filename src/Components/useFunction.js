@@ -5,14 +5,14 @@ const useFunction = () => {
             tree.replies.unshift(newComment);
             return tree;
         }
-        const updatedReply = tree.replies.map((ele) => addComment(ele, commentId , newComment))
+        const updatedReply = tree?.replies?.map((ele) => addComment(ele, commentId , newComment))
 
         return {...tree,replies:updatedReply};
     };
 
     const deleteComment = (tree, commentId) =>{
         if(tree.id === commentId){
-            return tree.replies.filter((ele) => ele.id !== commentId);
+            return tree?.replies?.filter((ele) => ele.id !== commentId);
         }
 
         const updatedReply = tree?.replies?.map((ele) => 

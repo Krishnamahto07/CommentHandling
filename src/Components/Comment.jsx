@@ -15,9 +15,8 @@ const Comment = ({data , commentAddHandle ,deleteHandle}) => {
   }
   
   return (
-    <div className={`${data.text ? ( 'w-[500px] ') : (' hidden')}`}>
-      <div className=' bg-gray-500 flex flex-col gap-3  justify-center items-center border  rounded-md'>
-        
+    <div className={`${data.text ? ( 'md:w-[400px] w-[300px] mx-auto ') : (' hidden')}`}>
+      <div className={` bg-[#818FB4]` +' flex flex-col gap-3  justify-center items-center border  rounded-md'}>
         <details>
           <summary className='text-gray-50 text-xl px-2 py-3'>{data.text}</summary>
               {
